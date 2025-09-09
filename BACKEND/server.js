@@ -30,9 +30,9 @@ app.use(express.json());
 
 // --- API ROUTES ---
 app.get('/', (req, res) => res.send('API is running...'));
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/customers', require('./routes/customers'));
-// app.use('/api/leads', require('./routes/leads'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/customers', require('./routes/customers'));
+app.use('/api/leads', require('./routes/leads'));
 
 
 // --- START SERVER ---
